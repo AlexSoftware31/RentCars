@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{580207A3-2C86-4494-BCBC-530F8C1F2200}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RentCar_Proyect_</RootNamespace>
+    <AssemblyName>RentCar%28Proyect%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\InspeccionRepository.cs" />
+    <Compile Include="Repository\RentasDesvRepository.cs" />
+    <Compile Include="Views\ClienteForms\ClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClienteForms\ClientesForm.Designer.cs">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClienteForms\CreateClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClienteForms\CreateClientForm.Designer.cs">
+      <DependentUpon>CreateClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClienteForms\EditClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClienteForms\EditClientForm.Designer.cs">
+      <DependentUpon>EditClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\CombustibleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\CombustibleForm.Designer.cs">
+      <DependentUpon>CombustibleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\CreateCombustibleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\CreateCombustibleForm.Designer.cs">
+      <DependentUpon>CreateCombustibleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\EditCombustibleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CombustibleForms\EditCombustibleForm.Designer.cs">
+      <DependentUpon>EditCombustibleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\CreateEmpleadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\CreateEmpleadoForm.Designer.cs">
+      <DependentUpon>CreateEmpleadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\EditEmpleadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\EditEmpleadoForm.Designer.cs">
+      <DependentUpon>EditEmpleadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\EmpleadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmpleadoForms\EmpleadoForm.Designer.cs">
+      <DependentUpon>EmpleadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inspecciones\CreateInspeccionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Inspecciones\CreateInspeccionForm.Designer.cs">
+      <DependentUpon>CreateInspeccionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inspecciones\InspeccionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Inspecciones\InspeccionForm.Designer.cs">
+      <DependentUpon>InspeccionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\CreateMarcaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\CreateMarcaForm.Designer.cs">
+      <DependentUpon>CreateMarcaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\EditMarcaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\EditMarcaForm.Designer.cs">
+      <DependentUpon>EditMarcaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\MarcaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MarcaFroms\MarcaForm.Designer.cs">
+      <DependentUpon>MarcaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModeloForms\CreateModeloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModeloForms\CreateModeloForm.Designer.cs">
+      <DependentUpon>CreateModeloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModeloForms\EditModeloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModeloForms\EditModeloForm.Designer.cs">
+      <DependentUpon>EditModeloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModeloForms\ModeloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModeloForms\ModeloForm.Designer.cs">
+      <DependentUpon>ModeloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\VehiculoRepository.cs" />
+    <Compile Include="Repository\CombustibleRepository.cs" />
+    <Compile Include="Repository\MarcaRepository.cs" />
+    <Compile Include="Repository\ModeloRepository.cs" />
+    <Compile Include="Repository\TiposVehiculosRepository.cs" />
+    <Compile Include="Repository\EmpleadoRepository.cs" />
+    <Compile Include="Repository\LoginRepository.cs" />
+    <Compile Include="Repository\ClientesRepository.cs" />
+    <Compile Include="Views\RentasDesvolucionForms\CreateRentDesvForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RentasDesvolucionForms\CreateRentDesvForm.Designer.cs">
+      <DependentUpon>CreateRentDesvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentasDesvolucionForms\RentasDesvForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RentasDesvolucionForms\RentasDesvForm.Designer.cs">
+      <DependentUpon>RentasDesvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\CreateTipoVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\CreateTipoVehiculoForm.Designer.cs">
+      <DependentUpon>CreateTipoVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\EditTipoVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\EditTipoVehiculoForm.Designer.cs">
+      <DependentUpon>EditTipoVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\TipoVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposVehiculoForms\TipoVehiculoForm.Designer.cs">
+      <DependentUpon>TipoVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\CreateUserForm.Designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioForms\UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\UsuariosRepository.cs" />
+    <Compile Include="Views\VehiculoForms\CreateVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VehiculoForms\CreateVehiculoForm.Designer.cs">
+      <DependentUpon>CreateVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VehiculoForms\EditVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VehiculoForms\EditVehiculoForm.Designer.cs">
+      <DependentUpon>EditVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VehiculoForms\VehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VehiculoForms\VehiculoForm.Designer.cs">
+      <DependentUpon>VehiculoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClienteForms\ClientesForm.resx">
+      <DependentUpon>ClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClienteForms\CreateClientForm.resx">
+      <DependentUpon>CreateClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClienteForms\EditClientForm.resx">
+      <DependentUpon>EditClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CombustibleForms\CombustibleForm.resx">
+      <DependentUpon>CombustibleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CombustibleForms\CreateCombustibleForm.resx">
+      <DependentUpon>CreateCombustibleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CombustibleForms\EditCombustibleForm.resx">
+      <DependentUpon>EditCombustibleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmpleadoForms\CreateEmpleadoForm.resx">
+      <DependentUpon>CreateEmpleadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmpleadoForms\EditEmpleadoForm.resx">
+      <DependentUpon>EditEmpleadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmpleadoForms\EmpleadoForm.resx">
+      <DependentUpon>EmpleadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Inspecciones\CreateInspeccionForm.resx">
+      <DependentUpon>CreateInspeccionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Inspecciones\InspeccionForm.resx">
+      <DependentUpon>InspeccionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MarcaFroms\CreateMarcaForm.resx">
+      <DependentUpon>CreateMarcaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MarcaFroms\EditMarcaForm.resx">
+      <DependentUpon>EditMarcaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MarcaFroms\MarcaForm.resx">
+      <DependentUpon>MarcaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModeloForms\CreateModeloForm.resx">
+      <DependentUpon>CreateModeloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModeloForms\EditModeloForm.resx">
+      <DependentUpon>EditModeloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModeloForms\ModeloForm.resx">
+      <DependentUpon>ModeloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\RentasDesvolucionForms\CreateRentDesvForm.resx">
+      <DependentUpon>CreateRentDesvForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RentasDesvolucionForms\RentasDesvForm.resx">
+      <DependentUpon>RentasDesvForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposVehiculoForms\CreateTipoVehiculoForm.resx">
+      <DependentUpon>CreateTipoVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposVehiculoForms\EditTipoVehiculoForm.resx">
+      <DependentUpon>EditTipoVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposVehiculoForms\TipoVehiculoForm.resx">
+      <DependentUpon>TipoVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsuarioForms\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsuarioForms\CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsuarioForms\UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VehiculoForms\CreateVehiculoForm.resx">
+      <DependentUpon>CreateVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VehiculoForms\EditVehiculoForm.resx">
+      <DependentUpon>EditVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VehiculoForms\VehiculoForm.resx">
+      <DependentUpon>VehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BackUpDb\RentCar.bak" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
